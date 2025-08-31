@@ -5,7 +5,7 @@ export interface GiphyResponse {
 }
 
 export interface GiphyGif {
-  type: Type;
+  type: string;
   id: string;
   url: string;
   slug: string;
@@ -15,13 +15,13 @@ export interface GiphyGif {
   username: string;
   source: string;
   title: string;
-  rating: Rating;
+  rating: string;
   content_url: string;
   source_tld: string;
   source_post_url: string;
   is_sticker: number;
   import_datetime: Date;
-  trending_datetime: Date | TrendingDatetimeEnum;
+  trending_datetime: Date | string;
   images: Images;
   analytics_response_payload: string;
   analytics: Analytics;
@@ -62,18 +62,6 @@ export interface FixedHeight {
   webp: string;
   frames?: string;
   hash?: string;
-}
-
-export enum Rating {
-  G = "g",
-}
-
-export enum TrendingDatetimeEnum {
-  The00000000000000 = "0000-00-00 00:00:00",
-}
-
-export enum Type {
-  GIF = "gif",
 }
 
 export interface User {
